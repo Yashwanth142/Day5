@@ -1,0 +1,47 @@
+if (x<y)
+then
+echo "x greater then y"
+else
+echo
+fi
+Neeta Mourya11:41 AM
+1. if [condition] then action1 fi
+2. if [condition] then action1 else action2 fi
+3. if [condition] then action1
+elif [condition] then action2
+else action3 fi
+
+1. only for if
+read -p "Enter value for x: " x
+read -p "Enter value for y: " y
+if [ $x -ne $y ]                                          
+then
+echo "x not equal then y"
+fi
+
+
+2. if and else
+read -p "Enter value for x: " x
+read -p "Enter value for y: " y
+if [ $x -gt $y ]
+then
+echo "x greater then y"
+else
+echo "y greater then x"
+fi
+
+
+2. if el
+3. if else ladder
+read -p "Enter value for x: " x
+read -p "Enter value for y: " y
+read -p "Enter value for z: " z
+if [ $x -gt $y ]
+then
+echo "x greater then y"
+elif [ $x -gt $z ]
+then
+echo "x greater then z"
+else
+echo "x less then y and z"
+fi
