@@ -7,17 +7,17 @@ case $n in
  ;;
  2)
  read -p "Enter inch:" i;
- f=$(($i/12))
+ f=`awk 'BEGIN{printf("%0.2f",'$i' * 0.0833333333)}'`
  echo "The $i inch to feet is $f";
  ;;
  3)
  read -p "Enter feet:" f;
- m=$(($f*3.28084))
+ m=`awk 'BEGIN{printf("%0.2f",'$f' * 0.3048)}'`
  echo "The $f feet in meters is $m";
  ;;
  4)
  read -p "Enter meter:"
- f=$(($m/3.28084))
+ f=`awk 'BEGIN{printf("%0.2f",'$f' * 0.3048)}'`
  echo "The $m meters in feet is $f";
  ;;
 esac
